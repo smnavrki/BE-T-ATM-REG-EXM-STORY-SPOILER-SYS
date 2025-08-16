@@ -17,7 +17,7 @@ namespace StorySpoilerSystemTestProject
         private const string BaseUrl = "https://d3s5nxhwblsjbi.cloudfront.net";
         private const string LoginUsername = "smo1";
         private const string LoginPassword = "12345678";
-        private const string ConstantAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI5ZmUwNjlmYy0xNWQ4LTQzNTQtOTgxYS00YjBmYjRkZTI5ZjMiLCJpYXQiOiIwOC8xNi8yMDI1IDA2OjIyOjI2IiwiVXNlcklkIjoiOWY1NTcyOTctODYwZi00N2Y1LThkZjUtMDhkZGRiMWExM2YzIiwiRW1haWwiOiJzbW8xQHNtbzEuY29tIiwiVXNlck5hbWUiOiJzbW8xIiwiZXhwIjoxNzU1MzQ2OTQ2LCJpc3MiOiJTdG9yeVNwb2lsX0FwcF9Tb2Z0VW5pIiwiYXVkIjoiU3RvcnlTcG9pbF9XZWJBUElfU29mdFVuaSJ9.PMXtmOuOkyz9Xdxr9DOAlI9JXHNz91J0udHwk3BnCqU";
+        private string ConstantAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI5ZmUwNjlmYy0xNWQ4LTQzNTQtOTgxYS00YjBmYjRkZTI5ZjMiLCJpYXQiOiIwOC8xNi8yMDI1IDA2OjIyOjI2IiwiVXNlcklkIjoiOWY1NTcyOTctODYwZi00N2Y1LThkZjUtMDhkZGRiMWExM2YzIiwiRW1haWwiOiJzbW8xQHNtbzEuY29tIiwiVXNlck5hbWUiOiJzbW8xIiwiZXhwIjoxNzU1MzQ2OTQ2LCJpc3MiOiJTdG9yeVNwb2lsX0FwcF9Tb2Z0VW5pIiwiYXVkIjoiU3RvcnlTcG9pbF9XZWJBUElfU29mdFVuaSJ9.PMXtmOuOkyz9Xdxr9DOAlI9JXHNz91J0udHwk3BnCqU";
         private string LastStoryId;
 
         private RestClient client;
@@ -35,6 +35,7 @@ namespace StorySpoilerSystemTestProject
             else
             {
                 jwtToken = GetAccessToken(LoginUsername, LoginPassword);
+                ConstantAccessToken = jwtToken;
             }
 
             var options = new RestClientOptions(BaseUrl)
