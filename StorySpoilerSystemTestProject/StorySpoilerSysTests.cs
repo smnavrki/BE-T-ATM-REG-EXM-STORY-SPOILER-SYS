@@ -28,7 +28,7 @@ namespace StorySpoilerSystemTestProject
         {
             string jwtToken = "";
 
-            if (!string.IsNullOrWhiteSpace(jwtToken))
+            if (!string.IsNullOrWhiteSpace(ConstantAccessToken))
             {
                 jwtToken = ConstantAccessToken;
             }
