@@ -35,7 +35,7 @@ namespace StorySpoilerSystemTestProject
             else
             {
                 jwtToken = GetAccessToken(LoginUsername, LoginPassword);
-                ConstantAccessToken = jwtToken;
+                ConstantAccessToken = null;
             }
 
             var options = new RestClientOptions(BaseUrl)
